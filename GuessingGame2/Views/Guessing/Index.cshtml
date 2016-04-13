@@ -1,0 +1,75 @@
+﻿@using GuessingGame2.Models
+@using GuessingGame2.Controllers
+
+@model Guessing
+
+@{
+    ViewBag.Title = "Guessing Game 2.0";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@if (ViewBag.Win == null || ViewBag.Win !=0)
+{
+    if (ViewBag.Win == -1)
+    {
+        <h2>Sorry, @Model.PlayerName, @Model.Guess is incorrect. Try a lower number.</h2>
+    }
+    else if (ViewBag.Win == 1)
+    {
+        <h2>Sorry, @Model.PlayerName, @Model.Guess is incorrect. Try a higher number.</h2>
+    }
+
+    using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+        
+        <div class="form-group">
+            @Html.LabelFor(
+                 m => m.PlayerName,
+                 htmlAttributes: new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(
+                 m => m.PlayerName,
+                 new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(
+                 m => m.PlayerName,
+                 "",
+                 new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(
+                 m => m.Guess,
+                 htmlAttributes: new { @class = "col-md-2 control-label" })
+            <div class="col-md-10">
+                @Html.EditorFor(
+                 m => m.Guess,
+                 new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(
+                 m => m.Guess,
+                 "",
+                 new { @class = "text-danger" })
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guess" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+    }
+}
+else
+{
+    <h2>That's it, @Model.PlayerName! The answer was @Model.Guess! It only took you @(((Counters)Session[SessionKeys.Counters]).PlayerCounter) guesses. It took the computer @(((Counters)Session[SessionKeys.Counters]).ComputerCounter) guesses.</h2>
+
+    <div>
+        @Html.ActionLink("Start Over", "Index")
+    </div>
+}
