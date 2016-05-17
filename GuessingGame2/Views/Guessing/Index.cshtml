@@ -13,11 +13,11 @@
 {
     if (ViewBag.Win == -1)
     {
-        <h2>Sorry, @Model.PlayerName, @Model.Guess is incorrect. Try a lower number.</h2>
+        <h2>Sorry @Model.PlayerName, @Model.Guess is incorrect. Try a lower number.</h2>
     }
     else if (ViewBag.Win == 1)
     {
-        <h2>Sorry, @Model.PlayerName, @Model.Guess is incorrect. Try a higher number.</h2>
+        <h2>Sorry @Model.PlayerName, @Model.Guess is incorrect. Try a higher number.</h2>
     }
 
     using (Html.BeginForm())
@@ -67,7 +67,7 @@
 }
 else
 {
-    <h2>That's it, @Model.PlayerName! The answer was @Model.Guess! It only took you @(((Counters)Session[SessionKeys.Counters]).PlayerCounter) guesses. It took the computer @(((Counters)Session[SessionKeys.Counters]).ComputerCounter) guesses.</h2>
+    <h2>That's it, @Model.PlayerName! The answer was @Model.Guess! It only took you @(((Counters)Session[SessionKeys.Counters]).PlayerCounter) guesses.<br/>It took the computer @(((Counters)Session[SessionKeys.Counters]).ComputerCounter) guesses.</h2>
 
     <div>
         @Html.ActionLink("Start Over", "Index")
