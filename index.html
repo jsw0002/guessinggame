@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Jordan Willis</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"crossorigin="anonymous"></script>
+
+	<style>
+    
+        body {
+        background: #7f7f7e url(evenbetter.jpg) no-repeat fixed 10% 50px;
+        }
+    
+        h1, h2, h3 {
+        color: #00a40b;
+        font-weight: bold;
+        }
+    
+        .section-title {
+	    text-align: center;
+	    font-size: 45px;	
+        }
+    
+        .navbar-nav li {
+	    font-size: 25px;
+	    padding-left: 30px;
+        }  
+    
+        .initials {
+	    font-size: 2em;
+	    font-weight: bolder;
+        color: #00a40b !important;
+        }
+        
+        .navbar {
+        background-color: #000000;
+        }
+        
+        .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        background-color: #00a40b; 
+        color: #000000;
+        border-radius: 15px;
+        font-weight: 500;
+        }
+        
+        .navbar-default .navbar-nav > li > a {
+        color: #00a40b;
+        }
+
+        .div-background {
+        background-color: #ffffff;
+        border-radius: 40px;
+        padding: 25px;
+        opacity: .8;
+        }
+
+        .div-title-background {
+        border-radius: 40px;
+        opacity: .8;
+        }
+
+        .title-section {
+        border-radius: 40px;
+        margin-top: 85px;
+        margin-bottom: 25px;
+        opacity: .8;
+        }
+
+        .project-image {
+        border: 1px solid black;
+        margin-bottom: 10px;
+        }    
+    
+        #footer {
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        }
+
+        .content-of-footer {
+        text-align: justify;
+        list-style: none;
+        padding: 10px;
+        }
+
+        .bottom-button {
+        padding-top: 5px;
+        width: 45%;
+        height: 45%;
+        }
+
+        #email, #vcard, #resume, #linkedin, #github, #bitbucket, #stackoverflow, #codepen {
+        text-align: center;
+        }
+
+        #email a, #vcard a, #resume a, #linkedin a, #github a, #bitbucket a, #stackoverflow a, #codepen a {
+        color: #00a40b;
+        padding-bottom: 10px;
+        }
+        
+        #main {
+            padding-top: 50px;
+        }
+        
+        p {
+            padding-top: 50px;
+        }
+        
+        #github-link {
+            padding: 0px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+
+	<div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand initials">JW</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://jsw0002.github.io#home">Home</a></li>
+                    <li><a href="http://jsw0002.github.io#about">About</a></li>
+                    <li><a href="http://jsw0002.github.io#skills">Skills</a></li>
+                    <li><a href="#http://jsw0002.github.ioprojects">Projects</a></li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+
+	<div class="container" id="main">
+		<div class="div-title-background">
+        <div class="row">
+			<div class="col-sm-12"><h3 class="section-title">Guessing Game</h3></div>
+		</div>
+        </div>
+        <div class="div-background">
+		<div class="row">
+			<div class="col-sm-4"><img class="img-responsive project-image" src="guessinggame.png"></div>
+			<div class="col-sm-8"><p>This is a guessing game where the user inputs his/her name and guesses a number between 1-10.</p></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"><img class="img-responsive project-image" src="guessinggamewrong.png"></div>
+			<div class="col-sm-8"><p>If the user does not guess correctly the game will give them a hint whether the number is higher or lower than their previous guess.</p></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4"><img class="img-responsive project-image" src="guessinggameover.png"></div>
+			<div class="col-sm-8"><p>When the user finally gets the correct answer they are then informed of how many guesses it took them as well as how many guesses it took a computer player to get it right as well.</p></div>
+		</div>
+        <div class="row">
+            <div class="col-sm-12"><p id="github-link">To visit the repository and check out the code <a href="https://github.com/jsw0002/guessinggame">Click Here</a>.</p></div>
+        </div>
+        </div>
+	</div>
+    
+    <div class="container" id="footer">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><div id="email"><a href="mailto:jsw0002@gmail.com"><img class="bottom-button" src="email.png"><br>Email</a></div></div>
+            <div class="col-sm-1"><div id="vcard"><a href="jordanwillis.vcf"><img class="bottom-button" src="aboutme.png"><br>V-Card</a></div></div>
+            <div class="col-sm-1"><div id="resume"><a href="jordanwillisresume.pdf"><img class="bottom-button" src="microsoftword.png"><br>Resume</a></div></div>
+            <div class="col-sm-1"><div id="linkedin"><a href="https://www.linkedin.com/in/jordanswillis"><img class="bottom-button" src="linkedin.png"><br>LinkedIn</a></div></div>
+            <div class="col-sm-1"><div id="github"><a href="https://github.com/jsw0002"><img class="bottom-button" src="github.png"><br>GitHub</a></div></div>
+            <div class="col-sm-1"><div id="bitbucket"><a href="https://bitbucket.org/jsw0002/"><img class="bottom-button" src="bitbucket.png"><br>Bitbucket</a></div></div>
+            <div class="col-sm-1"><div id="stackoverflow"><a href="http://stackoverflow.com/users/6119026/jsw0002"><img class="bottom-button" src="stackoverflow.png"><br>stackoverflow</a></div></div>
+            <div class="col-sm-1"><div id="codepen"><a href="https://codepen.io/jsw0002/"><img class="bottom-button" src="codepen.png"><br>CODEPEN</a></div></div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+</body>
+</html>
